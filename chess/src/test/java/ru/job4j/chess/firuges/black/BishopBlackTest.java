@@ -2,6 +2,7 @@ package ru.job4j.chess.firuges.black;
 
 import junit.framework.TestCase;
 import org.junit.Test;
+import ru.job4j.chess.ImpossibleMoveException;
 import ru.job4j.chess.firuges.Cell;
 
 import static org.hamcrest.Matchers.is;
@@ -18,7 +19,7 @@ public class BishopBlackTest extends TestCase {
     }
 
     @Test
-    public void testWay() {
+    public void testWay() throws ImpossibleMoveException {
         BishopBlack bb = new BishopBlack(Cell.C1);
         Cell[] rsl = bb.way(Cell.G5);
         Cell[] cells = new Cell[] {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
